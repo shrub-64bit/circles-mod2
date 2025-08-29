@@ -8,12 +8,12 @@ function progress(i, x){
     progressValues[i]=x;
     valueContainer.textContent = `${format(progressValues[0])}%`
     progressBars[i].style.background = `conic-gradient(
-      rgb(${hexAdds[0]}, ${hexAdds[1]}, ${hexAdds[2]}) ${progressValues[i].times(3.6)}deg,
-      #000 ${progressValues[i].times(3.6)}deg
+      rgb(${hexAdds[0]}, ${hexAdds[1]}, ${hexAdds[2]}) ${progressValues[i].times(36)}deg,
+      #000 ${progressValues[i].times(36)}deg
     )`
 }
 function createBars(su=false){
-    if(data.numbers[data.numbers.length-1].gte(100) || su){
+    if(data.numbers[data.numbers.length-1].gte(10) || su){
         let newBar = document.createElement('div')
         let prevBar = document.getElementById(`bar${progressBars.length-1}`)
         newBar.classList.add('circular-progress')
