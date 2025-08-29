@@ -45,7 +45,7 @@ function setupBars(x){
 function makeCircleEffectText(){
     let string = ""
     for (let i = 2; i < data.numbers.length; i++) {
-        string += `Circle ${i+1} (${formatWhole(data.numbers[i])}/10): ${format(higherEffects[i-2])}x to the Circle ${i} effect.\n`
+        string += `Circle ${i+1} (${formatWhole(data.numbers[i])}/20): ${format(higherEffects[i-2])}x to the Circle ${i} effect.\n`
     }
     return string
 }
