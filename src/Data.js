@@ -10,10 +10,10 @@ function getDefaultObject() {
 let data = getDefaultObject()
 //saving and loading
 function save(){
-    window.localStorage.setItem('flameCirclesSave', JSON.stringify(data))
+    window.localStorage.setItem('CirclesSave', JSON.stringify(data))
 }
 function load() {
-    let savedata = JSON.parse(window.localStorage.getItem('flameCirclesSave'))
+    let savedata = JSON.parse(window.localStorage.getItem('CirclesSave'))
     if (savedata !== undefined) fixSave(data, savedata)
     fixOldSaves()
 }
@@ -64,11 +64,11 @@ window.onload = function (){
 //full reset
 function fullReset(){
     exportSave()
-    window.localStorage.removeItem('flameCirclesSave')
+    window.localStorage.removeItem('CirclesSave')
     location.reload()
 }
 function deleteSave(){
-    window.localStorage.removeItem('flameCirclesSave')
+    window.localStorage.removeItem('CirclesSave')
     location.reload()
 }
 
