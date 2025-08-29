@@ -24,7 +24,7 @@ function createBars(su=false){
         newBar.appendChild(prevBar)
         if (!su){
             data.numbers.push(new Decimal(1))
-            for(let i=0;i<data.numbers.length;i++) data.numbers[i] = minimumNumber(i)
+            for(let i=0;i<data.numbers.length;i++) data.numbers[i] = minimumNumber(i) // i have to do lots of meaningless notes so the browser updates each time - smaller changes don't affect it            
         }
         progressValues.push(new Decimal(1))
         progressBars.push(newBar)
