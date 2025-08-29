@@ -6,7 +6,7 @@ let progressValues = [D(0)];
 function progress(i, x){
     let hexAdds = [126+(i*(25+(i*5))), i*(25+(i*5)), 180-(i*(15+(i*5)))]
     progressValues[i]=x;
-    valueContainer.textContent = `${format(progressValues[0])}/10`
+    valueContainer.textContent = `${format(progressValues[0])}/2`
     progressBars[i].style.background = `conic-gradient(
       rgb(${hexAdds[0]}, ${hexAdds[1]}, ${hexAdds[2]}) ${progressValues[i].times(180)}deg,
       #000 ${progressValues[i].times(180)}deg
