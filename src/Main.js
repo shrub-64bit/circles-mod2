@@ -7,7 +7,7 @@ function gainNumber(lowestGain){
         if(data.numbers[i].gte(37) && data.numbers[i+1] !== undefined){
 
             // Circle 2 Behavior if Circle 1 is 'forever' at 100%
-            if(i === 0 && lowestGain.gte(100)){
+            if(i === 0 && lowestGain.gte(37)){
                 // console.log(`Ran! Current Circle 2: ${data.numbers[1]}, it should increase by ${lowestGain.div(100)}`)
                 data.numbers[1] = data.numbers[1].plus(lowestGain.div(37))
                 numberReset(1)
