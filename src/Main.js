@@ -52,4 +52,4 @@ function switchTab(i){
 }
 window.setInterval(function(){
     mainLoop()
-}, 50);
+}, 50); // idk what that 50 is there for
