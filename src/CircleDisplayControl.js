@@ -8,8 +8,8 @@ function progress(i, x){
     progressValues[i]=x;
     valueContainer.textContent = `${format(progressValues[0])}/10`
     progressBars[i].style.background = `conic-gradient(
-      rgb(${hexAdds[0]}, ${hexAdds[1]}, ${hexAdds[2]}) ${progressValues[i].times(36)}deg,
-      #000 ${progressValues[i].times(36)}deg
+      rgb(${hexAdds[0]}, ${hexAdds[1]}, ${hexAdds[2]}) ${progressValues[i].times((360/37))}deg,
+      #000 ${progressValues[i].times((360/37))}deg
     )`
 }
 function createBars(su=false){
@@ -18,8 +18,8 @@ function createBars(su=false){
         let prevBar = document.getElementById(`bar${progressBars.length-1}`)
         newBar.classList.add('circular-progress')
         newBar.id = `bar${progressBars.length}`
-        newBar.style.height = `${180+(progressBars.length*10)}px`
-        newBar.style.width = `${180+(progressBars.length*10)}px`
+        newBar.style.height = `${180+(progressBars.length*(100/37))}px`
+        newBar.style.width = `${180+(progressBars.length*(100/37))}px`
         container.appendChild(newBar)
         newBar.appendChild(prevBar)
         if (!su){
@@ -52,12 +52,12 @@ function makeCircleEffectText(){
 
 function circleTextControls(){
     document.getElementById("descText").style.display = data.textTriggers[0]?`flex`:`none`
-    document.getElementById("descText").innerText = `Circle 2 (${formatWhole(data.numbers[1])}%) provides a ${format(effect)}x multiplier to the speed of Circle 1.`
+    document.getElementById("descText").innerText = `Circle 2 (${formatWhole(data.numbers[1])}/37) provides a ${format(effect)}x multiplier to the speed of Circle 1.`
     document.getElementById("descText2").style.display = data.textTriggers[1]?`block`:`none`
     document.getElementById("descText2").innerHTML = `All circles above Circle 2 multiply the effect of the previous Circle.<br><span style="font-size: 0.9rem">Hover to see precise values.</span>`
 
     DOM(`descText3`).innerText = makeCircleEffectText()
 
     DOM(`descText4`).style.display = data.numbers.length > 6 ? `block` : `none`
-    document.getElementById("descText4").innerText = `Circle 7 (${formatWhole(data.numbers[6])}/10) increases the minimum percent of all lower Circles by ${format(minimumNumber(0).sub(1))*10}%`
+    document.getElementById("descText4").innerText = `Circle 7 (${formatWhole(data.numbers[6])}/37) increases the minimum percent of all lower Circles by ${format(minimumNumber(0).sub(1))*(100/37)}%`
 }
