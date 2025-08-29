@@ -1,7 +1,7 @@
 let diff
 function gainNumber(lowestGain){
     // Circle 1 Gain
-    data.numbers[0] = data.numbers[0].plus((lowestGain)*(5)
+    data.numbers[0] = data.numbers[0].plus((lowestGain)
 
     for(let i=0;i<data.numbers.length;i++){
         if(data.numbers[i].gte(20) && data.numbers[i+1] !== undefined){
