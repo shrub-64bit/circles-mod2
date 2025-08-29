@@ -18,7 +18,7 @@ function createBars(su=false){
         let prevBar = document.getElementById(`bar${progressBars.length-1}`)
         newBar.classList.add('circular-progress')
         newBar.id = `bar${progressBars.length}`
-        newBar.style.height = `${180+(progressBars.length)*20}px`
+        newBar.style.height = `${180+(progressBars.length)}px`
         newBar.style.width = `${180+(progressBars.length)*20}px`
         container.appendChild(newBar)
         newBar.appendChild(prevBar)
