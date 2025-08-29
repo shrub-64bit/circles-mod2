@@ -1,6 +1,6 @@
 const valueContainer = document.querySelector(".value-container")
 const container = document.getElementById("circleContainer")
-let progressBars = [document.getElementById("bar0")]
+let progressBars = [document.getElementById("bar0")] // from index.html
 let progressValues = [D(0)];
 
 function progress(i, x){
