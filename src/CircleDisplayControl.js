@@ -17,12 +17,12 @@ function createBars(su=false){
         let newBar = document.createElement('div')
         let prevBar = document.getElementById(`bar${progressBars.length-1}`) // i have to do lots of meaningless notes so the browser updates each time - smaller changes don't affect it 
         newBar.classList.add('circular-progress') // it's such a pain
-        newBar.id = `bar${progressBars.length}` // // i have to do lots of meaningless notes so the browser updates each time - smaller changes don't affect it 
+        newBar.id = `bar${progressBars.length}` // i have to do lots of meaningless notes so the browser updates each time - smaller changes don't affect it 
         newBar.style.height = `${180+(progressBars.length)*20}px`// this bit is cursed
         newBar.style.width = `${180+(progressBars.length)*20}px` // so is this
-        container.appendChild(newBar)
-        newBar.appendChild(prevBar)
-        if (!su){
+        container.appendChild(newBar) // what is this stuff
+        newBar.appendChild(prevBar) // i dont really know
+        if (!su){ // i have to do lots of meaningless notes so the browser updates each time - smaller changes don't affect it // i have to do lots of meaningless notes so the browser updates each time - smaller changes don't affect it 
             data.numbers.push(new Decimal(1))
             for(let i=0;i<data.numbers.length;i++) data.numbers[i] = minimumNumber(i) // i have to do lots of meaningless notes so the browser updates each time - smaller changes don't affect it            
         }
