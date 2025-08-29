@@ -8,12 +8,12 @@ function progress(i, x){
     progressValues[i]=x;
     valueContainer.textContent = `${format(progressValues[0])}`
     progressBars[i].style.background = `conic-gradient(
-      rgb(${hexAdds[0]}, ${hexAdds[1]}, ${hexAdds[2]}) ${progressValues[i].times(18)}deg,
-      #000 ${progressValues[i].times(18)}deg
+      rgb(${hexAdds[0]}, ${hexAdds[1]}, ${hexAdds[2]}) ${progressValues[i].times(36)}deg,
+      #000 ${progressValues[i].times(36)}deg
     )`
 }
 function createBars(su=false){
-    if(data.numbers[data.numbers.length-1].gte(20) || su){
+    if(data.numbers[data.numbers.length-1].gte(10) || su){
         let newBar = document.createElement('div')
         let prevBar = document.getElementById(`bar${progressBars.length-1}`)
         newBar.classList.add('circular-progress')
@@ -52,12 +52,12 @@ function makeCircleEffectText(){
 
 function circleTextControls(){
     document.getElementById("descText").style.display = data.textTriggers[0]?`flex`:`none`
-    document.getElementById("descText").innerText = `Circle 2 (${formatWhole(data.numbers[1])}) provides a ${format(effect)}x multiplier to the speed of Circle 1.`
+    document.getElementById("descText").innerText = `Circle 2 (${formatWhole(data.numbers[1])}/10) provides a ${format(effect)}x multiplier to the speed of Circle 1.`
     document.getElementById("descText2").style.display = data.textTriggers[1]?`block`:`none`
     document.getElementById("descText2").innerHTML = `All circles above Circle 2 multiply the effect of the previous Circle.<br><span style="font-size: 0.9rem">Hover to see precise values.</span>`
 
     DOM(`descText3`).innerText = makeCircleEffectText()
 
     DOM(`descText4`).style.display = data.numbers.length > 6 ? `block` : `none`
-    document.getElementById("descText4").innerText = `Circle 7 (${formatWhole(data.numbers[6])}) increases the minimum percent of all lower Circles by ${format(minimumNumber(0).sub(1))}%`
+    document.getElementById("descText4").innerText = `Circle 7 (${formatWhole(data.numbers[6])}/10) increases the minimum percent of all lower Circles by ${format(minimumNumber(0).sub(1)*(10))}%`
 }
