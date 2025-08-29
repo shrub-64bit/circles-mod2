@@ -6,7 +6,7 @@ let progressValues = [D(0)];
 function progress(i, x){
     let hexAdds = [126+(i*(25+(i*5))), i*(25+(i*5)), 180-(i*(15+(i*5)))]
     progressValues[i]=x;
-    valueContainer.textContent = `${format(progressValues[0])}%`
+    valueContainer.textContent = `${format(progressValues[0])}/10`
     progressBars[i].style.background = `conic-gradient(
       rgb(${hexAdds[0]}, ${hexAdds[1]}, ${hexAdds[2]}) ${progressValues[i].times(36)}deg,
       #000 ${progressValues[i].times(36)}deg
@@ -45,7 +45,7 @@ function setupBars(x){
 function makeCircleEffectText(){
     let string = ""
     for (let i = 2; i < data.numbers.length; i++) {
-        string += `Circle ${i+1} (${formatWhole(data.numbers[i])}%): ${format(higherEffects[i-2])}x to the Circle ${i} effect.\n`
+        string += `Circle ${i+1} (${formatWhole(data.numbers[i])}/10): ${format(higherEffects[i-2])}x to the Circle ${i} effect.\n`
     }
     return string
 }
@@ -59,5 +59,5 @@ function circleTextControls(){
     DOM(`descText3`).innerText = makeCircleEffectText()
 
     DOM(`descText4`).style.display = data.numbers.length > 6 ? `block` : `none`
-    document.getElementById("descText4").innerText = `Circle 7 (${formatWhole(data.numbers[6])}%) increases the minimum percent of all lower Circles by ${format(minimumNumber(0).sub(1))}%`
+    document.getElementById("descText4").innerText = `Circle 7 (${formatWhole(data.numbers[6])}/10) increases the minimum percent of all lower Circles by ${format(minimumNumber(0).sub(1))*10}%`
 }
