@@ -19,7 +19,7 @@ function createBars(su=false){
         newBar.classList.add('circular-progress')
         newBar.id = `bar${progressBars.length}`
         newBar.style.height = `${180+(progressBars.length)}px`
-        newBar.style.width = `${180+(progressBars.length)*200}px`
+        newBar.style.width = `${180+(progressBars.length)*10}px`
         container.appendChild(newBar)
         newBar.appendChild(prevBar)
         if (!su){
@@ -45,16 +45,16 @@ function setupBars(x){
 function makeCircleEffectText(){
     let string = ""
     for (let i = 2; i < data.numbers.length; i++) {
-        string += `Circle ${i+1} (${formatWhole(data.numbers[i])}/10): ${format(higherEffects[i-2])}x to the Circle ${i} effect.\n`
+        string += `Circle ${i+1} (${formatWhole(data.numbers[i])}/10): ${format(higherEffects[i-2])}x to the power of Circle ${i}.\n`
     }
     return string
 }
 
 function circleTextControls(){
     document.getElementById("descText").style.display = data.textTriggers[0]?`flex`:`none`
-    document.getElementById("descText").innerText = `Circle 2 (${formatWhole(data.numbers[1])}/10) provides a ${format(effect)}x multiplier to the speed of Circle 1.`
+    document.getElementById("descText").innerText = `Circle 2 (${formatWhole(data.numbers[1])}/10) provides a ${format(effect)}x speed mult. to the speed of Circle 1.`
     document.getElementById("descText2").style.display = data.textTriggers[1]?`block`:`none`
-    document.getElementById("descText2").innerHTML = `All circles above Circle 2 multiply the effect of the previous Circle.<br><span style="font-size: 0.9rem">Hover to see precise values.</span>`
+    document.getElementById("descText2").innerHTML = `All circles above Circle 2 boost the power of the previous Circle.<br><span style="font-size: 0.9rem">Hover to see precise values.</span>`
 
     DOM(`descText3`).innerText = makeCircleEffectText()
 
