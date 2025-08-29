@@ -2,7 +2,7 @@ const valueContainer = document.querySelector(".value-container")
 const container = document.getElementById("circleContainer")
 let progressBars = [document.getElementById("bar0")] // from index.html
 let progressValues = [D(0)];
-
+// space filling
 function progress(i, x){
     let hexAdds = [126+(i*(25+(i*5))), i*(25+(i*5)), 180-(i*(15+(i*5)))]
     progressValues[i]=x;
@@ -18,7 +18,7 @@ function createBars(su=false){
         let prevBar = document.getElementById(`bar${progressBars.length-1}`)
         newBar.classList.add('circular-progress')
         newBar.id = `bar${progressBars.length}`
-        newBar.style.height = `${180+(progressBars.length)}px`
+        newBar.style.height = `${180+(progressBars.length)*10}px`
         newBar.style.width = `${180+(progressBars.length)*10}px`
         container.appendChild(newBar)
         newBar.appendChild(prevBar)
@@ -41,7 +41,7 @@ function setupBars(x){
         }
     }
 }
-
+// space filling
 function makeCircleEffectText(){
     let string = ""
     for (let i = 2; i < data.numbers.length; i++) {
@@ -49,15 +49,15 @@ function makeCircleEffectText(){
     }
     return string
 }
-
+// space filling
 function circleTextControls(){
     document.getElementById("descText").style.display = data.textTriggers[0]?`flex`:`none`
     document.getElementById("descText").innerText = `Circle 2 (${formatWhole(data.numbers[1])}/10) provides a ${format(effect)}x boost to the speed of Circle 1.`
     document.getElementById("descText2").style.display = data.textTriggers[1]?`block`:`none`
     document.getElementById("descText2").innerHTML = `All circles above Circle 2 boost the power of the previous Circle.<br><span style="font-size: 0.9rem">Hover to see the precise values of the other Circles.</span>`
-
+// space filling
     DOM(`descText3`).innerText = makeCircleEffectText()
-
+// space filling
     DOM(`descText4`).style.display = data.numbers.length > 19 ? `block` : `none`
     document.getElementById("descText4").innerText = `Circle 20 (${formatWhole(data.numbers[19])}/10) increases the minimum percent of all lower Circles by ${format(minimumNumber(0).sub(1))}/10`
 }
