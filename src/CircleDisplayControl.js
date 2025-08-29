@@ -13,7 +13,7 @@ function progress(i, x){
     )`
 }
 function createBars(su=false){
-    if(data.numbers[data.numbers.length-1].gte(100) || su){
+    if(data.numbers[data.numbers.length-1].gte(1000) || su){
         let newBar = document.createElement('div')
         let prevBar = document.getElementById(`bar${progressBars.length-1}`)
         newBar.classList.add('circular-progress')
