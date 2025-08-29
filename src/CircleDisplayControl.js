@@ -59,5 +59,5 @@ function circleTextControls(){
     DOM(`descText3`).innerText = makeCircleEffectText()
 
     DOM(`descText4`).style.display = data.numbers.length > 19 ? `block` : `none`
-    document.getElementById("descText4").innerText = `Circle 20 (${formatWhole(data.numbers[6])}/2) increases the minimum percent of all lower Circles by ${format(minimumNumber(0).sub(1))}/2`
+    document.getElementById("descText4").innerText = `Circle 20 (${formatWhole(data.numbers[19])}/2) increases the minimum percent of all lower Circles by ${format(minimumNumber(0).sub(1))}/2`
 }
