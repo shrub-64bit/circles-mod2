@@ -15,10 +15,10 @@ function progress(i, x){
 function createBars(su=false){
     if(data.numbers[data.numbers.length-1].gte(1000) || su){
         let newBar = document.createElement('div')
-        let prevBar = document.getElementById(`bar${progressBars.length-1}`)
-        newBar.classList.add('circular-progress')
+        let prevBar = document.getElementById(`bar${progressBars.length-1}`) // i have to do lots of meaningless notes so the browser updates each time - smaller changes don't affect it 
+        newBar.classList.add('circular-progress') // it's such a pain
         newBar.id = `bar${progressBars.length}`
-        newBar.style.height = `${180+(progressBars.length)}px`// this bit is cursed
+        newBar.style.height = `${180+(progressBars.length)*20}px`// this bit is cursed
         newBar.style.width = `${180+(progressBars.length)*20}px` // so is this
         container.appendChild(newBar)
         newBar.appendChild(prevBar)
