@@ -19,7 +19,7 @@ function createBars(su=false){
         newBar.classList.add('circular-progress')
         newBar.id = `bar${progressBars.length}`
         newBar.style.height = `${180+(progressBars.length)}px`// this bit is cursed
-        newBar.style.width = `${180+(progressBars.length)}px` // so is this
+        newBar.style.width = `${180+(progressBars.length)*20}px` // so is this
         container.appendChild(newBar)
         newBar.appendChild(prevBar)
         if (!su){
