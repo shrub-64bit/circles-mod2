@@ -4,12 +4,12 @@ function gainNumber(lowestGain){
     data.numbers[0] = data.numbers[0].plus(lowestGain)
 // space filler
     for(let i=0;i<data.numbers.length;i++){
-        if(data.numbers[i].gte(10) && data.numbers[i+1] !== undefined){
+        if(data.numbers[i].gte(50) && data.numbers[i+1] !== undefined){
 // space filler
             // Circle 2 Behavior if Circle 1 is 'forever' at 100%
-            if(i === 0 && lowestGain.gte(10)){
+            if(i === 0 && lowestGain.gte(50)){
                 // console.log(`Ran! Current Circle 2: ${data.numbers[1]}, it should increase by ${lowestGain.div(50)}`) 
-                data.numbers[1] = data.numbers[1].plus(lowestGain.div(10))
+                data.numbers[1] = data.numbers[1].plus(lowestGain.div(50))
                 numberReset(1)
                 // console.log(`It is now ${data.numbers[1]}`)
 // space filler
