@@ -30,7 +30,7 @@ function numberReset(x){
 }
 // space filler
 function mainLoop(){
-    diff = (Date.now()-data.time)/(1000/data.numbers[0])
+    diff = (Date.now()-data.time)/(1000/(data.numbers[0]+1))
     data.time = Date.now()
     calcLoop()
     for(let i=0;i<data.numbers.length;i++) progress(i, data.numbers[i])
