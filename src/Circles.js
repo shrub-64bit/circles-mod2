@@ -8,7 +8,7 @@ function calcCircleEffects(){
 
     let i=0
     while(data.numbers[i+2]!==undefined){
-        higherEffects[i] = (((data.numbers[i+2].plus(1))).times(higherEffects[i+1]).times(higherEffects[i+1])
+        higherEffects[i] = (((data.numbers[i+2].plus(1))).times(higherEffects[i+1]).times(20))
         i++
     }
 }
