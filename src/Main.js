@@ -1,7 +1,7 @@
 let diff
 function gainNumber(lowestGain){
     // Circle 1 Gain
-    data.numbers[0] = data.numbers[0].plus(lowestGain+0.01)
+    data.numbers[0] = data.numbers[0].plus(lowestGain)
 // space filler
     for(let i=0;i<data.numbers.length;i++){
         if(data.numbers[i].gte(100) && data.numbers[i+1] !== undefined){
@@ -30,7 +30,7 @@ function numberReset(x){
 }
 // space filler
 function mainLoop(){
-    diff = (Date.now()-data.time)/(1000/(data.numbers[0]+1))
+    diff = (Date.now()-data.time)/(1000)
     data.time = Date.now()
     calcLoop()
     for(let i=0;i<data.numbers.length;i++) progress(i, data.numbers[i])
