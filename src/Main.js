@@ -38,8 +38,8 @@ function mainLoop(){
     circleTextControls()
 }
 function calcLoop(){
-    let gain = D(1).times(effect)
-    gainNumber(gain.times(diff))
+    let gain = (D(1).times(effect).times(effect))
+    gainNumber((gain.times(diff)).times(diff))
     calcCircleEffects()
 }
 function fixNumbers(){
