@@ -8,7 +8,7 @@ function gainNumber(lowestGain){
 
             // Circle 2 Behavior if Circle 1 is 'forever' at 100%
             if(i === 0 && lowestGain.gte(100)){
-                // console.log(`Ran! Current Circle 2: ${data.numbers[1]}, it should increase by ${lowestGain.div(50)}`) 
+                // console.log(`Ran! Current Circle 2: ${data.numbers[1]}, it should increase by ${lowestGain.div(100)}`) 
                 data.numbers[1] = data.numbers[1].plus(lowestGain.div(100))
                 numberReset(1)
                 // console.log(`It is now ${data.numbers[1]}`)
@@ -30,7 +30,7 @@ function numberReset(x){
 }
 
 function mainLoop(){
-    diff = (Date.now()-data.time)
+    diff = (Date.now()-data.time)/1000
     data.time = Date.now()
     calcLoop()
     for(let i=0;i<data.numbers.length;i++) progress(i, data.numbers[i])
