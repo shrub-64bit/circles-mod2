@@ -22,8 +22,8 @@ function gainNumber(lowestGain){
     }
 }
 // space filler
-let minimumNumber = (i) => i < 9
-    ? data.numbers[9] !== undefined ? data.numbers[9].plus(1) : D(1) // affects when last circle appears
+let minimumNumber = (i) => i < 99
+    ? data.numbers[99] !== undefined ? data.numbers[99].plus(1) : D(1) // affects when last circle appears
     : D(1)
 function numberReset(x){
     for(let i=0;i<x;i++) data.numbers[i] = minimumNumber(i)
