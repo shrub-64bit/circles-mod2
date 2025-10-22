@@ -1,5 +1,5 @@
 let effect = D(1)
-let higherEffects = Array(10).fill(D(1))
+let higherEffects = Array(100).fill(D(1))
 
 function calcCircleEffects(){
     if(data.numbers[1]!==undefined){
