@@ -10,7 +10,7 @@ function gainNumber(lowestGain){
                 if(data.numbers[i].gte(100)){
                     // console.log(`Ran! Current Circle i+1: ${data.numbers[i]}, it should increase by ${lowestGain.div(100)}`) 
                     data.numbers[i+1] = data.numbers[i+1].plus(lowestGain.div(100))
-                    numberReset(i+1)
+                    numberReset(i)
                 // console.log(`It is now ${data.numbers[i]}`)
 
                     continue // Ensure that Circle 2 is only increased once per loop
