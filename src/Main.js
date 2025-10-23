@@ -9,7 +9,7 @@ function gainNumber(lowestGain){
             for(let i=0;i<data.numbers.length;i++){
                 if(data.numbers[i].gte(100)){
                     // console.log(`Ran! Current Circle i+1: ${data.numbers[i]}, it should increase by ${lowestGain.div(100)}`) 
-                    data.numbers[i+1] = data.numbers[i+1].plus(data.numbers[i+1].div(100))
+                    data.numbers[i+1] = data.numbers[i+1].plus(data.numbers[i].div(100))
                     numberReset(i+1)
                 // console.log(`It is now ${data.numbers[i]}`)
 
