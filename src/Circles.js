@@ -3,7 +3,7 @@ let higherEffects = Array(100).fill(D(1))
 
 function calcCircleEffects(){
     if(data.numbers[1]!==undefined){
-        effect = (data.numbers[1].sqrt).times(higherEffects[0])
+        effect = (data.numbers[1].sqrt()).times(higherEffects[0])
     }
 
     let i=0
